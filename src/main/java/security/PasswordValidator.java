@@ -42,5 +42,15 @@ public class PasswordValidator {
         return false; // si no la encuentra false
     }
 
+        // Revisa si una contraseña cumple todas las reglas del sistema
+    public boolean esPasswordValida(String password){
+        validarNull(password);
+
+        return tieneLongitudMinima(password)
+                && contieneNumero(password)
+                && contieneMayuscula(password);
+
+    }
+
 }
 
