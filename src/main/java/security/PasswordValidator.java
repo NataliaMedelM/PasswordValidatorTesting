@@ -1,7 +1,13 @@
 package security;
 
 public class PasswordValidator {
-
+    public boolean validar (String password){
+        if (password == null){
+            return false;
+        }
+        return password.length()>= 8;
+    }
+  
     public boolean tieneLongitudMinima(String password) {
         if (password == null) {
             throw new IllegalArgumentException("La contraseña no puede ser null");
