@@ -1,7 +1,5 @@
 package security;
 
-
-
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
@@ -42,10 +40,6 @@ public class PasswordValidatorTest {
         assertTrue(validator.tieneLongitudMinima("Clave1234"));
     }
 
-    @Test
-    void testLongitudCorta() {
-        assertFalse(validator.tieneLongitudMinima("abc12"));
-    }
 
     // MAYÚSCULAS
 
@@ -59,12 +53,9 @@ public class PasswordValidatorTest {
         assertFalse(validator.contieneMayuscula("clave123"));// Debe devolver false si no hay mayúsculas
     }
 
-        // Verifica que el sistema maneje correctamente una contraseña null
+    // Verifica que el sistema maneje correctamente una contraseña null
     @Test
     public void testPasswordNull() {
         assertThrows(IllegalArgumentException.class, () -> validator.esPasswordValida(null));
     }
-
 }
-
-

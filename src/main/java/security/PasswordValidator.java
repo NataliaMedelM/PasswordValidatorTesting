@@ -1,7 +1,7 @@
 package security;
 
 public class PasswordValidator {
-    public boolean validar (String password){
+    public boolean validar(String password){
         if (password == null){
             return false;
         }
@@ -16,6 +16,7 @@ public class PasswordValidator {
     }
 
     public boolean contieneNumero(String password) {
+
         if (password == null) {
             throw new IllegalArgumentException("La contraseña no puede ser null");
         }
@@ -28,24 +29,18 @@ public class PasswordValidator {
 
     //Parte 4: contieneMayuscula (Sabrina Jeria)
     public boolean contieneMayuscula(String password) {  //Válida que la contraseña tenga a lo menos una mayuscula
-
-        validarNull(password);  //Llama a metodo de validación (null) para con ello evitar errores
-
+        validar(password);  //Llama a metodo de validación (null) para con ello evitar errores
         for (char c : password.toCharArray()) {  // String a arreglo de caracteres (los recorre uno por uno)
-
             if (Character.isUpperCase(c)) { //verifica si es una letra mayuscula)
-
                 return true; // si la encuentra devuelve un true
             }
         }
-
         return false; // si no la encuentra false
     }
 
-        // Revisa si una contraseña cumple todas las reglas del sistema
+    // Revisa si una contraseña cumple todas las reglas del sistema
     public boolean esPasswordValida(String password){
-        validarNull(password);
-
+        validar(password);
         return tieneLongitudMinima(password)
                 && contieneNumero(password)
                 && contieneMayuscula(password);
@@ -53,4 +48,3 @@ public class PasswordValidator {
     }
 
 }
-
