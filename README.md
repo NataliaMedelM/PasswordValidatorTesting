@@ -1,4 +1,6 @@
-![img_2.png](img_2.png)
+
+<img width="1210" height="740" alt="image" src="https://github.com/user-attachments/assets/bd4bba7e-9058-4030-8dcb-8d9eec618567" />
+
 
 
 
@@ -69,7 +71,8 @@ Una contraseña es válida si cumple con:
 
 ## 📁 Estructura del proyecto
 
-![img.png](img.png)
+<img width="291" height="211" alt="image" src="https://github.com/user-attachments/assets/51fb71d2-b515-422c-b3e8-4efcd2a6a3cc" />
+
 
 ## 🖼️ Evidencia de ejecución del proyecto
 
@@ -89,7 +92,8 @@ Esto confirma que toda la lógica del `PasswordValidator` y sus pruebas unitaria
 
 ### 📸 Captura de ejecución
 
-![img_1.png](img_1.png)
+<img width="926" height="236" alt="image" src="https://github.com/user-attachments/assets/7bb8d0c2-29dd-40c6-9acf-cd0949f264a9" />
+
 
 ---
 
