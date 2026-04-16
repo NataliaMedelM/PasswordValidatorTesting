@@ -1,13 +1,16 @@
 package security;
 
+
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class PasswordValidatorTest {
 
     // Los tests deben ir AQUÍ ADENTRO (dentro de estas llaves)
-
+  PasswordValidator validator = new PasswordValidator();
+  
     @Test
     @DisplayName("Debería fallar si la contraseña tiene menos de 8 caracteres")
     void testLongitudCorta() {
@@ -24,4 +27,23 @@ public class PasswordValidatorTest {
         assertEquals(true, resultado);
     }
 
+    @Test
+    void testContieneNumero() {
+        assertTrue(validator.contieneNumero("Clave123"));
+    }
+
+    @Test
+    void testNoContieneNumero() {
+        assertFalse(validator.contieneNumero("ClaveABC"));
+    }
+
+    @Test
+    void testLongitudValida() {
+        assertTrue(validator.tieneLongitudMinima("Clave1234"));
+    }
+
+    @Test
+    void testLongitudCorta() {
+        assertFalse(validator.tieneLongitudMinima("abc12"));
+    }
 }
