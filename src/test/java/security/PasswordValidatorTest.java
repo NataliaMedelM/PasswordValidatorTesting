@@ -46,4 +46,19 @@ public class PasswordValidatorTest {
     void testLongitudCorta() {
         assertFalse(validator.tieneLongitudMinima("abc12"));
     }
+
+    // MAYÚSCULAS
+
+    @Test
+    void contieneMayuscula_true() {
+        assertTrue(validator.contieneMayuscula("clave123A")); // Debe devolver true si hay mayúscula
+    }
+
+    @Test
+    void contieneMayuscula_false() {
+        assertFalse(validator.contieneMayuscula("clave123"));// Debe devolver false si no hay mayúsculas
+    }
+
 }
+
+
