@@ -15,14 +15,23 @@ public class PasswordValidator {
         return password.length() >= 8;
     }
 
+   /**
+     * Valida que la contraseña contenga al menos un número.
+     * @param password contraseña a evaluar
+     * @return true si contiene número, false si no
+     */
     public boolean contieneNumero(String password) {
-        if (password == null) {
-            throw new IllegalArgumentException("La contraseña no puede ser null");
+        validarNull(password);
+
+        // Recorremos cada carácter
+        for (char c : password.toCharArray()) {
+            if (Character.isDigit(c)) {
+                return true;
+            }
         }
 
-        for (char c : password.toCharArray()) {
-            if (Character.isDigit(c)) return true;
-        }
         return false;
     }
+    
 }
+
