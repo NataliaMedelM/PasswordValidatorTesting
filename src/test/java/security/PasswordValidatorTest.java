@@ -59,6 +59,12 @@ public class PasswordValidatorTest {
         assertFalse(validator.contieneMayuscula("clave123"));// Debe devolver false si no hay mayúsculas
     }
 
+        // Verifica que el sistema maneje correctamente una contraseña null
+    @Test
+    public void testPasswordNull() {
+        assertThrows(IllegalArgumentException.class, () -> validator.esPasswordValida(null));
+    }
+
 }
 
 
